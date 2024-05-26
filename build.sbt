@@ -12,7 +12,9 @@ lazy val root = project
 
     scalaVersion := scala3Version,
 
-    // cask depencency
-    libraryDependencies += "com.lihaoyi" %% "cask" % "0.9.2",
-    libraryDependencies += "org.scalameta" %% "munit" % "0.7.29" % Test
-  )
+    libraryDependencies ++= Seq(
+        "com.lihaoyi" %% "cask" % "0.9.2",
+        "com.lihaoyi" %% "requests" % "0.8.2",
+        "org.scalameta" %% "munit" % "0.7.29" % Test
+    )
+)
